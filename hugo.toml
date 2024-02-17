@@ -1,76 +1,113 @@
-baseURL = "https://risotto.joeroe.io"
-theme = "risotto"
-title = "risotto demo"
-author = "Joe Roe"
-copyright = "© [Joe Roe](https://joeroe.io) & [risotto contributors](https://github.com/joeroe/risotto/graphs/contributors)."
-paginate = 3
-languageCode = "en"
-DefaultContentLanguage = "en"
-enableInlineShortcodes = true
-# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
-# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
-ignoreErrors = ["error-remote-getjson"]
-
-# Automatically add content sections to main menu
-sectionPagesMenu = "main"
+baseURL = "https://casiowave.github.io/"
+title = "Diptanuj Sarkar"
+languageCode = "en-in"
+DefaultContentLanguage = "en-in" # Change this to change the site's language
+theme = "hugo.386"
+preserveTaxonomyNames = true
+googleAnalytics = "G-8HGF7L8RSJ"
 
 [params]
-noindex = false
+    # The name to display as main title in the home page
+    mainpagetitle = "Diptanuj Sarkar - Personal Website"
 
-[params.theme]
-palette = "base16-dark"
+    # The subtitle to display under the title in the home page
+    mainpagesubtitle = "Thou shall pass!" 
 
-# Sidebar: about/bio
-[params.about]
-title = "risotto"
-description = "A [hugo](https://gohugo.io) theme inspired by terminal ricing."
-logo = "images/rice.svg"
+    # The description of your website. It will be displayed in the home page
+    mainpagedesc = "Hello, I'm Diptanuj, a 2nd Year Undergrad at IISER Kolkata. This is my website - feel free to explore! I upload content regarding stuff that I find interesting here."
 
-# Sidebar: social links
-# Available icon sets:
-# * FontAwesome 6 <https://fontawesome.com/> ('fa-brands', 'fa-normal', or 'fa-solid' for brands)
-# * Academicons <https://jpswalsh.github.io/academicons> ('ai ai-')
+    # The name to display in the copyright section in the footer
+    copyrightname = "Diptanuj Sarkar"
 
-[[params.socialLinks]]
-icon = "fa-brands fa-github"
-title = "GitHub"
-url = "https://github.com/joeroe/risotto"
+    # The url to use as link in the copyright name in the footer. Leave empty to use none.
+    copyrighturl = "https://casiowave.github.com"
 
-[[params.socialLinks]]
-icon = "fa-solid fa-envelope"
-title = "Email"
-url = "mailto:example@example.com"
+    # Show the "built on Hugo" disclaimer
+    showhugo = false
 
-[[params.socialLinks]]
-icon = "ai ai-orcid"
-title = "ORCID"
-url = "https://orcid.org/0000-0001-2345-6789"
+    # Urls for social networks
+    #twitter = "https://twitter.com"
+    linkedin = "https://www.linkedin.com/in/diptanuj/"
+    github = "https://github.com/CasioWave"
+    lastfm = "https://www.last.fm/user/CasioWave"
+    rym = "https://rateyourmusic.com/~CasioWave"
+    #gitlab = "https://gitlab.com/CasioWave"
+
+    # Enables or disables the loading animations. false activates them. Default is false.
+    loadfastload = false
+
+    # Sets the speed for the page loading effect. Default is 1.0.
+    loadspeedfactor = 1.0
+
+    # Enables or disables the second flyby cursor. Default is false.
+    loadonepass = true
+
+[params.copyright]
+    name = "Diptanuj Sarkar"
+
+    # The url to use as link in the copyright name in the footer. Leave empty to use none.
+    url = "https://casiowave.github.io"
+
+    # Text to go before copyright information
+    #prefix = "[hugo.386 theme by Max le Fou](https://gitlab.com/maxlefou/hugo.386)"
+
+    # Text to go between copyright and hugo disclaimer (if enabled)
+    #suffix = "Example site"
 
 [menu]
-
+  # This displays buttons in the navbar to access your contents
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "about" # An unique identifier for the button
+    name = "About"       # A display name for the button
+    url = "/about/"      # The path to the content. It can lead to a single page (like here)
+    weight = 10          # A number to order the buttons in the navbar
+
+    [[menu.main]]
+    identifier = "electronics" # An unique identifier for the button
+    name = "Electronics"       # A display name for the button
+    url = "/electronics/"      # The path to the content. It can lead to a single page (like here)
+    weight = 20          # A number to order the buttons in the navbar
+
+    [[menu.main]]
+    identifier = "quiz" # An unique identifier for the button
+    name = "Quiz"       # A display name for the button
+    url = "/quiz/"      # The path to the content. It can lead to a single page (like here)
+    weight = 30          # A number to order the buttons in the navbar
+
+    [[menu.main]]
+    identifier = "software" # An unique identifier for the button
+    name = "Software"       # A display name for the button
+    url = "/software/"      # The path to the content. It can lead to a single page (like here)
+    weight = 40          # A number to order the buttons in the navbar
+
+    [[menu.main]]
+    identifier = "physics" # An unique identifier for the button
+    name = "Physics"       # A display name for the button
+    url = "/physics/"      # The path to the content. It can lead to a single page (like here)
+    weight = 15         # A number to order the buttons in the navbar
+
+    [[menu.main]]
+    identifier = "music" # An unique identifier for the button
+    name = "Music"       # A display name for the button
+    url = "/music/"      # The path to the content. It can lead to a single page (like here)
+    weight = 50          # A number to order the buttons in the navbar
+
+    [[menu.main]]
+    identifier = "Notes"
+    name = "Notes"
+    url = "/notes/"
     weight = 10
+
+    [[menu.main]]
+    identifier = "Philosophy"
+    name = "Philosophy"
+    url = "/philosophy/"
+    weight = 100
 
 [taxonomies]
 category = "categories"
 tag = "tags"
-series = "series"
 
-# For hugo >= 0.60.0, enable inline HTML
-[markup.goldmark.renderer]
-unsafe = true
-
-[markup]
-
-  # Table of contents
-  # Add toc = true to content front matter to enable
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel   = 3
-    ordered    = true
 
 [privacy]
 
